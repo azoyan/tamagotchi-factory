@@ -1,0 +1,19 @@
+[package]
+name = "factory-tamagotchi"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git", features = ["debug"], branch = "testnet" }
+codec = { package = "parity-scale-codec", version = "3.1.2", default-features = false, features = ["derive", "full"] }
+scale-info = { version = "2.0.1", default-features = false, features = ["derive"] }
+factory-tamagotchi-io = { path = "io" }
+
+tamagotchi-io = {path = "../hello-world-gear-academy/io", package = "io" }
+
+[build-dependencies]
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", branch = "testnet" }
+factory-tamagotchi-io = { path = "io" }
+
+[dev-dependencies]
+gtest = { git = "https://github.com/gear-tech/gear.git", branch = "testnet" }
